@@ -1,0 +1,70 @@
+@import 'font-aeonik-pro-vf';
+@import 'font-aeonik-pro';
+
+$color-gray-lightest: #f1f1f1;
+$color-gray-lighter: #e1e1e1;
+$color-gray: #999;
+$color-white: #fff;
+$color-gray-dark: #333;
+
+html,
+body {
+  background-color: $color-white;
+}
+
+.aeonik-pro {
+  font-family: 'AeonikPro', sans-serif;
+ }
+ 
+ @supports (font-variation-settings: normal) {
+  .aeonik-pro {
+    font-family: 'AeonikProVF', sans-serif;
+    font-feature-settings: "liga" on,"kern" on;
+  }
+ }
+
+.aeonik-pro.air {
+  @include font-weight(100);
+}
+.aeonik-pro.thin {
+  @include font-weight(200);
+}
+.aeonik-pro.light {
+  @include font-weight(300);
+}
+.aeonik-pro.regular {
+  @include font-weight(400);
+}
+.aeonik-pro.medium {
+  @include font-weight(500);
+}
+.aeonik-pro.bold {
+  @include font-weight(700);
+}
+.aeonik-pro.black {
+  @include font-weight(900);
+}
+
+.italic {
+  font-style: italic;
+}
+
+.App {
+  font-family: sans-serif;
+}
+
+.select-weight {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 10px;
+  > li {
+    > a {
+      color: $color-gray;
+      text-decoration: none;
+      &.active {
+        color: $color-gray-dark;
+      }
+    }
+  }
+}
